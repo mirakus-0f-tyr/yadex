@@ -193,7 +193,6 @@ struct Lump_loc
    i32 ofs;
    i32 len;
    };
-#include "wstructs.h"
 
 
 /*
