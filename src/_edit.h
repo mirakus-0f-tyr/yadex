@@ -86,7 +86,6 @@ typedef enum
 // FIXME: make a class of it.
 typedef struct
 {
-  public :
     int   mb_ino[MBI_COUNT];	// The numbers of the items on the menu bar
     Menu *mb_menu[MBM_COUNT];	// The actual menu objects
 
