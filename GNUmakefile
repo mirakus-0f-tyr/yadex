@@ -86,6 +86,7 @@ CFLAGS = -O
 # LDFLAGS should not contain options that mean
 # something to the C++ compiler.
 CXXFLAGS = -O
+CXXFLAGS += '-std=c++03'
 #CXXFLAGS += -DWHITE_BACKGROUND
 #LDFLAGS  =
 
@@ -107,6 +108,7 @@ DCFLAGS		+= -Winline			# GCC warnings
 DCFLAGS		+= -pg				# Profiling
 
 DCXXFLAGS	= -g -O
+DCXXFLAGS      += '-std=c++03'
 DCXXFLAGS	+= -Wall			# GCC warnings
 DCXXFLAGS	+= -pedantic			# GCC warnings
 DCXXFLAGS	+= -Wno-parentheses		# GCC warnings
