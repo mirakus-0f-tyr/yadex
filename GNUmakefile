@@ -414,6 +414,13 @@ install: $(OBJDIR)/install
 	@echo "  Happy editing !"
 	@echo "---------------------------------------------------------------"
 
+.PHONY: uninstall
+uninstall:
+	@rm -rvf $(DESTDIR)$(BINDIR)/yadex
+	@rm -rvf $(DESTDIR)$(MANDIR)/man6/yadex.6
+	@rm -rvf $(DESTDIR)$(SHAREDIR)
+	@rm -rvf $(DESTDIR)$(ETCDIR)/yadex.cfg
+
 .PHONY: clean
 clean:
 	rm -f $(OBJ_CONFIG) $(OBJ_YADEX) $(OBJ_ATCLIB) $(OBJDIR)/yadex
