@@ -401,7 +401,7 @@ mkdir -p $BUILDDIR
 #	FreeBSD hier(7) paths
 #
 BINDIR=$PREFIX/bin
-ETCDIR=/etc
+ETCDIR=$PREFIX/etc
 ETCDIRNV=
 MANDIR=$PREFIX/share/man
 SHAREDIR=$PREFIX/share/$APPNAME
