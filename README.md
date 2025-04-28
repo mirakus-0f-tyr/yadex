@@ -42,13 +42,16 @@ to select wanted verts, right-click to Insert, select all lines, right-click to
 create sector. If we just wanted to draw lines and have sectors automatically
 created we'd just use a new editor!
 
-- Add a more portable build system (autotools)
+- ~~Add a more portable build system (autotools)~~
 
 The configure and GNUMakefile setup originally provided is pretty nice, but
 adding a newer build system will help find compilers/libraries and allow use of
 standard environment variables during configure. I understand a lot of people
 prefer CMake these days, but I'd prefer to use autotools.
 
+Note: because of yadex needing to find the ygd and config files, I have added a
+"make localinst" rule that will make a setup in the "app" directory. This is
+good for debugging and using the app while not being installed system-wide.
 - fix any serious bugs if they are found
 
 Other things I've got on the back of my brain:
