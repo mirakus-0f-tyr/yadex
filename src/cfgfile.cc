@@ -573,6 +573,20 @@ opt_desc_t options[] =		// Description of the command line options
     "Step between zoom factors (in %)",
     &zoom_step },
 
+  { "3dpreview_x_size",
+    "3dX",
+    OPT_INTEGER,
+    "x",
+    "3d preview pane pixel size X",
+    &prevPixelsX },
+
+  { "3dpreview_y_size",
+    "3dY",
+    OPT_INTEGER,
+    "x",
+    "3d preview pane pixel size Y",
+    &prevPixelsY },
+
   { 0,
     0,
     OPT_END,

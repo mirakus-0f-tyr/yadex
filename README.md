@@ -30,7 +30,7 @@ same overall workflow:
 
 - move camera to position ala eureka (yes, I'm keeping the 3d preview patch)
 
-- change size of 3d preview to configurable size
+- ~~change size of 3d preview to configurable size~~
 
 - drawing with mouse (at this point it won't really feel like DEU/Yadex anymore,
   but using the keyboard and drawing verts is really clunky). The ability to

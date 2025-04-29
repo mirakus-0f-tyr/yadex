@@ -372,6 +372,8 @@ extern int   zoom_default;	// Initial zoom factor for map
 extern int   zoom_step;		// Step between zoom factors in percent
 extern int   digit_zoom_base;	// Zoom factor of `1' key, in percent
 extern int   digit_zoom_step;	// Step between digit keys, in percent 
+extern int   prevPixelsX;	// X size of the 3d preview pane
+extern int   prevPixelsY;	// Y size of the 3d preview pane
 extern confirm_t insert_vertex_merge_vertices;
 extern confirm_t insert_vertex_split_linedef;
 extern bool  blindly_swap_sidedefs;

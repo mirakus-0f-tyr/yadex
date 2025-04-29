@@ -1158,8 +1158,9 @@ if (view.px != player->xpos || view.py != player->ypos)
 
 /* create image */
 
-view.sw = 320;
-view.sh = 200;
+// init with values from cfg file (or default if none specified))
+view.sw = prevPixelsX;
+view.sh = prevPixelsY;
 
 view.screen = new Img ((unsigned short int) view.sw, (unsigned short int) view.sh, false);
 view.im_ch = new ImageCache;
