@@ -69,3 +69,22 @@ Doom/Doom2.
 
 - Possible move to SDL
 
+###Misc. Tasks
+
+- The original configure created credits.cc dynamically from a text file located
+  in docsrc. I did not bother with this when I converted to autotools, and so
+  the version in the src dir is just some static version from whenever. I don't
+  see a reason to change this right now, but since other dynamic files were
+  added to the build process, it wouldn't hurt to do this one as well.
+
+- include guards on ALL header files, even if it doesn't make sense for them to
+  ever be included somewhere else (consistency!)
+
+- spend more time looking at the farhaven/master branch to understand exactly
+  what they have done. It seems there was quite a bit of work done formatting
+  and modernizing the code. Merge where it makes sense. (This is actually a
+  bigger one.)
+
+- To fulfill curiosity, find out if this code can still be built, work on MS DOS
+  (if sticking with current autotools setup, modifications will need to be
+  made!).

@@ -22,3 +22,4 @@ config.cc
 config.etc
 config.share
 configure
+src/yadex
