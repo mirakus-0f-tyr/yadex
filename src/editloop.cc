@@ -1097,6 +1097,12 @@ for (RedrawMap = 1; ; RedrawMap = 0)
 	    RedrawMap = 1;
       }
 
+   /* cheap/quick hack to test mouse button theory - JMD */
+   else if (is.key == YE_BUTR_PRESS)
+   {
+     goto insobj;
+   }
+
    /* AYM : added is.in_window */
    if (is.in_window && ! is.butl && ! is.shift)
       {
@@ -2103,6 +2109,7 @@ cancel_save_as:
       // [Ins]: insert a new object
       else if (is.key == YK_INS || is.key == YK_INS + YK_SHIFT) /* 'Ins' */
 	 {
+insobj:
 	 SelPtr cur;
          int prev_obj_type = e.obj_type;
 

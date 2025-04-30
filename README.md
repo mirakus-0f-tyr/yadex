@@ -1,3 +1,5 @@
+### Yadex Doom Editor
+
 Most people don't want to use Yadex. Newer editors handle so much of the
 underlying work that working like this is considered a thing of the past. I like
 it. I like the minimal dependencies (X), the launching/menu from the shell, and
@@ -17,6 +19,7 @@ also seems targeted more specifically at FreeBSD. I had to install libbsd to get
 that version of the code building. If I ever really dig into yadex on a real
 level (actually trying to add modern QoL features), I may base off of that code.
 
+### "Goals"
 Some things I would like to see happen with yadex, while retaining (mostly) the
 same overall workflow:
 
@@ -32,15 +35,7 @@ same overall workflow:
 
 - ~~change size of 3d preview to configurable size~~
 
-- drawing with mouse (at this point it won't really feel like DEU/Yadex anymore,
-  but using the keyboard and drawing verts is really clunky). The ability to
-  edit using the "classic" controls should still be available, if one is so
-  inclined.
-
-The workflow might go something like this: left-click to draw verts, left-drag
-to select wanted verts, right-click to Insert, select all lines, right-click to
-create sector. If we just wanted to draw lines and have sectors automatically
-created we'd just use a new editor!
+- ~~inserting with the mouse~~
 
 - ~~Add a more portable build system (autotools)~~
 
@@ -69,7 +64,7 @@ Doom/Doom2.
 
 - Possible move to SDL
 
-###Misc. Tasks
+### Misc. Tasks
 
 - The original configure created credits.cc dynamically from a text file located
   in docsrc. I did not bother with this when I converted to autotools, and so
@@ -88,3 +83,14 @@ Doom/Doom2.
 - To fulfill curiosity, find out if this code can still be built, work on MS DOS
   (if sticking with current autotools setup, modifications will need to be
   made!).
+
+### Known Issues
+
+- program crashes when compiled with gcc 5.4. Everything will build fine, but
+  will crash when creating a sector. This is with the gcc version from Ubuntu
+  16.04. It might be specific to this Ubuntu build of gcc. I have not made a
+  separate compile of 5.4 to test. I have not been able to recreate the issue on
+  any other setup/compiler.
+
+  The area where the crash occurs is objects.cc line 570 (buffer overflow as
+  reported by valgrind).
