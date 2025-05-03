@@ -1282,5 +1282,6 @@ void SetCameraPosition(int newX, int newY)
 {
    view.x = newX;
    view.y = newY;
+   view.CalcViewZ();
    return;
 }
