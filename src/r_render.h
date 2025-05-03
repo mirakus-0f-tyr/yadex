@@ -9,6 +9,7 @@
 
 
 void Render3D ();
+void SetCameraPosition(int newX, int newY);
 
 
 #endif  /* DO NOT ADD ANYTHING AFTER THIS LINE */

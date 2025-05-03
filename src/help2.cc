@@ -51,7 +51,7 @@ static const char *help_text[] =
   "v     Vertices mode               p,<   Jump to previous object",
   "&     Show/hide object numbers    j,#   Jump to object #N",
   "%%     Show/hide sprites",
-  "                                  +/-   Zoom in/out",
+  "R/C   3D preview/camera pos       +/-   Zoom in/out",
   "Ins   Insert a new object         g/G   Decr./incr. the grid step",
   "Del   Delete the object(s)        h     Hide/show the grid",
   "Retn  Edit object properties      H     Reset grid step to the max",

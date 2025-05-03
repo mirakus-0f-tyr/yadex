@@ -2,7 +2,7 @@
 # Process this file with autoconf to produce a configure script.
 
 AC_PREREQ([2.69])
-AC_INIT([Yadex], [1.7.4], [jhndavis68@gmail.com])
+AC_INIT([Yadex], [1.7.5], [jhndavis68@gmail.com])
 
 # things yadex needs (yadex original configure/config.h)
 AC_DEFINE([Y_X11], [], [Needed By Yadex])

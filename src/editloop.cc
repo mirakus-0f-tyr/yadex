@@ -2322,6 +2322,12 @@ insobj:
         RedrawMap = 1;
         }
 
+      // move 3D camera to position
+      else if (is.key == 'C')
+         {
+            SetCameraPosition(e.pointer_x, e.pointer_y);
+         }
+
       // [@] Show font (not documented)
       else if (is.key == '@')
          {

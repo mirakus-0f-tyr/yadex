@@ -1274,3 +1274,13 @@ delete[] view.thing_floors;
 view.thing_floors = 0;
 }
 
+/*
+ * Sets start coordinates of the preview
+ */
+
+void SetCameraPosition(int newX, int newY)
+{
+   view.x = newX;
+   view.y = newY;
+   return;
+}

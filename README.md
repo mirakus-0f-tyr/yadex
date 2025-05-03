@@ -28,10 +28,11 @@ same overall workflow:
 - reconfigurable keys via the config file (no GUI needed, just edit the config
   file)
 
-- drag the map ala eureka (like in eureka, you hold down the a key and then drag
+- drag the map a'la eureka (like in eureka, you hold down the "a" key and then drag
   with pointer to move map smoothly)
 
-- move camera to position ala eureka (yes, I'm keeping the 3d preview patch)
+- ~~move camera to position a'la eureka (yes, I'm keeping the 3d preview
+  patch)~~
 
 - ~~change size of 3d preview to configurable size~~
 
@@ -86,11 +87,9 @@ Doom/Doom2.
 
 ### Known Issues
 
-- program crashes when compiled with gcc 5.4. Everything will build fine, but
-  will crash when creating a sector. This is with the gcc version from Ubuntu
-  16.04. It might be specific to this Ubuntu build of gcc. I have not made a
-  separate compile of 5.4 to test. I have not been able to recreate the issue on
-  any other setup/compiler.
-
-  The area where the crash occurs is objects.cc line 570 (buffer overflow as
-  reported by valgrind).
+- program ends with a SIGABRT when creating a sector any time the program was
+  compiled on Ubuntu with the provided gcc packages. I think this has to do with
+  the gcc configuration, but I'm not sure. This may also occur on other
+  mainstream distributions (not thoroughly tested). I have not had the problem
+  with Arch Linux or self-compiled versions of gcc/g++. I'm currently looking
+  into the problem.
