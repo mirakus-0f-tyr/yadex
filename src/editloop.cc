@@ -1739,7 +1739,7 @@ cancel_save_as:
           }
         }
       // [E]: Select/unselect all 1s linedefs in path
-      else if (is.key == 'E' && e.highlighted._is_linedef ())
+      else if (is.key == 'S' && e.highlighted._is_linedef ())
 	 {
 	 ForgetSelection (&e.Selected);
 	 select_1s_linedefs_path (&e.Selected, e.highlighted.num, YS_ADD);
