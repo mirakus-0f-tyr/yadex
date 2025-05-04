@@ -567,7 +567,7 @@ switch (objtype)
 	 SideDefs[last].yoff = 0;
 	 strcpy (SideDefs[last].tex1, "-");
 	 strcpy (SideDefs[last].tex2, "-");
-	 strcpy (SideDefs[last].tex3, default_middle_texture);
+	 strncpy (SideDefs[last].tex3, default_middle_texture, WAD_TEX_NAME);
 	 SideDefs[last].sector = NumSectors - 1;
 	 }
       MadeMapChanges = 1;

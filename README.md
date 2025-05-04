@@ -85,11 +85,3 @@ Doom/Doom2.
   (if sticking with current autotools setup, modifications will need to be
   made!).
 
-### Known Issues
-
-- program ends with a SIGABRT when creating a sector any time the program was
-  compiled on Ubuntu with the provided gcc packages. I think this has to do with
-  the gcc configuration, but I'm not sure. This may also occur on other
-  mainstream distributions (not thoroughly tested). I have not had the problem
-  with Arch Linux or self-compiled versions of gcc/g++. I'm currently looking
-  into the problem.
