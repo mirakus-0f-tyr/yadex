@@ -2079,7 +2079,7 @@ cancel_save_as:
       }
       
       // [Del]: delete the current object
-      else if (is.key == YK_DEL
+      else if ((is.key == YK_DEL || is.key == '\b')
          && (e.Selected || e.highlighted ())) /* 'Del' */
 	 {
 	 if (e.obj_type == OBJ_THINGS
