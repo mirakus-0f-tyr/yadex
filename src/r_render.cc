@@ -71,9 +71,6 @@ public:
    int z;
    // view position.
 
-   // check for user camera placement
-   bool cameraSet;
-
    static const int EYE_HEIGHT = 41;
    // standard height above the floor.
 
@@ -1137,14 +1134,6 @@ if (! view.p_type)
 
 Thing *player = FindPlayer (view.p_type);
 
-   // Check for user moving camera position and update player pos
-   if (view.cameraSet)
-      {
-      player->xpos = view.x;
-      player->ypos = view.y;
-      view.cameraSet = false;
-      }
-
 if (! player)
    {
    if (view.p_type != THING_DEATHMATCH)
@@ -1291,7 +1280,6 @@ view.thing_floors = 0;
 
 void SetCameraPosition(int newX, int newY)
 {
-   view.cameraSet = true;
    view.x = newX;
    view.y = newY;
    view.CalcViewZ();
