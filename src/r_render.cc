@@ -63,13 +63,15 @@ Place, Suite 330, Boston, MA 02111-1307, USA.
 
 struct Y_View
 {
-public:
    int p_type, px, py;
    // player type and position.
 
    float x, y; 
    int z;
    // view position.
+
+   bool cameraSet;
+   // check for camera pos moved before first render
 
    static const int EYE_HEIGHT = 41;
    // standard height above the floor.
@@ -1126,6 +1128,8 @@ return 0;
 
 void Render3D ()
 {
+static bool initDone;
+
 if (! view.p_type)
    {
    view.p_type = THING_PLAYER1;
@@ -1145,16 +1149,23 @@ if (! player)
       return;
    }
 
-if (view.px != player->xpos || view.py != player->ypos)
-   {
-   // if player moved, re-create view parameters
+// initialization
+if (! initDone)
+{
+   // turn on texturing and sprites as default
+   view.texturing = 1;
+   view.sprites = 1;
 
-   view.x = view.px = player->xpos;
-   view.y = view.py = player->ypos;
+   if (!view.cameraSet)
+      {
+         view.x = player->xpos;
+         view.y = player->ypos;
+      }
 
    view.CalcViewZ ();
    view.SetAngle (player->angle * ONEPI / 180.0);
-   }
+   initDone = true;
+}
 
 /* create image */
 
@@ -1283,5 +1294,6 @@ void SetCameraPosition(int newX, int newY)
    view.x = newX;
    view.y = newY;
    view.CalcViewZ();
+   view.cameraSet = true;
    return;
 }
